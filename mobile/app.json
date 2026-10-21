@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "MarketLens AI",
+    "slug": "marketlens-ai",
+    "scheme": "marketlens",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "plugins": ["expo-router"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.marketlensai"
+    },
+    "android": {
+      "package": "com.yourname.marketlensai",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B1220"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+      }
+    }
+  }
+}
