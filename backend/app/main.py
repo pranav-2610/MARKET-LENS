@@ -25,6 +25,23 @@ class ResearchRequest(BaseModel):
     company: str = Field(min_length=1, max_length=160)
     symbol: str = Field(min_length=1, max_length=24, pattern=r"^[A-Za-z0-9.^_-]+$")
 
+@app.get("/")
+def root():
+    return {
+        "app": "MarketLens AI",
+        "status": "running",
+        "message": "AI-powered stock research API",
+        "docs": "/docs",
+        "health": "/health",
+        "example_stock": "/api/stocks/INFY.NS"
+    }
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    from fastapi.responses import Response
+    return Response(status_code=204)
+
 
 @app.get("/health")
 def health():
